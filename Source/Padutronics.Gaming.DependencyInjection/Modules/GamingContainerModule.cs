@@ -9,5 +9,6 @@ public sealed class GamingContainerModule : IContainerModule
         containerBuilder.For<Application>().UseSelf().SingleInstance();
 
         containerBuilder.For<Game>().UseSelf().SingleInstance();
+        containerBuilder.For<IGameExiter>().Use<GameExiter>().SingleInstance();
     }
 }
