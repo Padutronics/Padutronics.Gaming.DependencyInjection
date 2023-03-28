@@ -13,6 +13,7 @@ internal sealed class ComponentsContainerModule : IContainerModule
         containerBuilder.For<IBehaviorAdapterFactory>().UseFactory();
 
         RegisterBehavior<IAnimationBehavior, AnimationComponentFactory, AnimationBehaviorToComponentAdapter>(containerBuilder);
+        RegisterBehavior<IDrawBehavior, DrawComponentFactory, DrawBehaviorToComponentAdapter>(containerBuilder);
     }
 
     private void RegisterBehavior<TBehavior, TFactory, TAdapter>(IContainerBuilder containerBuilder)
