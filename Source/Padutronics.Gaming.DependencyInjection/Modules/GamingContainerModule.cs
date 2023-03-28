@@ -16,6 +16,7 @@ public sealed class GamingContainerModule : IContainerModule
             .IncludeModule<AssetsContainerModule>()
             .IncludeModule<BootstrappingContainerModule>()
             .IncludeModule<ComponentsContainerModule>()
-            .IncludeModule<FramesContainerModule>();
+            .IncludeModule<FramesContainerModule>()
+            .IncludeModule<GraphicsContainerModule>();
     }
 }
