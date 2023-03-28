@@ -6,5 +6,6 @@ public sealed class GamingContainerModule : IContainerModule
 {
     public void Load(IContainerBuilder containerBuilder)
     {
+        containerBuilder.For<Application>().UseSelf().SingleInstance();
     }
 }

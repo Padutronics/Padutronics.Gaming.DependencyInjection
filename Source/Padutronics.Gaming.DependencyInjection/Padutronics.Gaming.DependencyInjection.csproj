@@ -17,5 +17,6 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Padutronics.DependencyInjection" Version="0.1.0" />
+        <PackageReference Include="Padutronics.Gaming" Version="0.1.0" />
     </ItemGroup>
 </Project>
