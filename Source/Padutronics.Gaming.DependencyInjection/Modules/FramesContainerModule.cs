@@ -20,6 +20,7 @@ internal sealed class FramesContainerModule : IContainerModule
         RegisterFrameRunner<DrawComponentFrameRunner>(containerBuilder);
         RegisterFrameRunner<EndDrawFrameRunner>(containerBuilder);
         RegisterFrameRunner<InputQueueFrameRunner>(containerBuilder);
+        RegisterFrameRunner<SwitchSceneFrameRunner>(containerBuilder);
     }
 
     private void RegisterFrameRunner<TFrameRunner>(IContainerBuilder containerBuilder)
