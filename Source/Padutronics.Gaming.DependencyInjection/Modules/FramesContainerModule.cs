@@ -12,5 +12,6 @@ internal sealed class FramesContainerModule : IContainerModule
         containerBuilder.For<IFrameMetricManager>().Use<FrameMetricManager>().SingleInstance();
 
         containerBuilder.For<IFrameMeasurer, IFrameCountProvider>().Use<FrameCountMeasurer>().SingleInstance();
+        containerBuilder.For<IFrameMeasurer, IFrameTimeProvider>().Use<FrameTimeMeasurer>().SingleInstance();
     }
 }
