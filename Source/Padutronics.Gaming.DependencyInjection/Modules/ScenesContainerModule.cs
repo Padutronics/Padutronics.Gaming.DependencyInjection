@@ -9,5 +9,6 @@ internal sealed class ScenesContainerModule : IContainerModule
     {
         containerBuilder.For<ISceneManager, ISceneProvider>().Use<SceneManager>().SingleInstance();
         containerBuilder.For<ISceneSource>().Use<SceneSource>().SingleInstance();
+        containerBuilder.For<ISceneStack, ISceneStackNotifier>().Use<SceneStack>().SingleInstance();
     }
 }
