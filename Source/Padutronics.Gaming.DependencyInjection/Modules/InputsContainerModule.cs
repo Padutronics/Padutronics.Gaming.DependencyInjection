@@ -16,5 +16,6 @@ internal sealed class InputsContainerModule : IContainerModule
         containerBuilder.For<IFrameUpdatable>().Use<InputDeviceUpdatable>().SingleInstance();
 
         containerBuilder.For<IInputDevice>().Use<InputDevice<KeyboardState>>().SingleInstance();
+        containerBuilder.For<IKeyboard, IKeyboardManager, IInputDeviceManager<KeyboardState>>().Use<Keyboard>().SingleInstance();
     }
 }
