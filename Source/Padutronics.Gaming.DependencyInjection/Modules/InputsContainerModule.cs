@@ -9,5 +9,6 @@ internal sealed class InputsContainerModule : IContainerModule
     {
         containerBuilder.For<Input>().UseSelf().InstancePerDependency();
         containerBuilder.For<IInputProvider>().Use<InputProvider>().SingleInstance();
+        containerBuilder.For<IInputQueue, IInputQueueManager>().Use<InputQueue>().SingleInstance();
     }
 }
