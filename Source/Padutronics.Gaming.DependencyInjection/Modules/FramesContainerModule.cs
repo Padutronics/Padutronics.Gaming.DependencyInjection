@@ -16,6 +16,7 @@ internal sealed class FramesContainerModule : IContainerModule
         containerBuilder.For<IFrameMeasurer, IFrameTimeProvider>().Use<FrameTimeMeasurer>().SingleInstance();
 
         RegisterFrameRunner<AnimationFrameRunner>(containerBuilder);
+        RegisterFrameRunner<BeginDrawFrameRunner>(containerBuilder);
     }
 
     private void RegisterFrameRunner<TFrameRunner>(IContainerBuilder containerBuilder)
