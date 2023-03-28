@@ -8,5 +8,6 @@ internal sealed class FramesContainerModule : IContainerModule
     public void Load(IContainerBuilder containerBuilder)
     {
         containerBuilder.For<FrameMetricOptions>().UseSelf().InstancePerDependency();
+        containerBuilder.For<IFrameMetricManager>().Use<FrameMetricManager>().SingleInstance();
     }
 }
