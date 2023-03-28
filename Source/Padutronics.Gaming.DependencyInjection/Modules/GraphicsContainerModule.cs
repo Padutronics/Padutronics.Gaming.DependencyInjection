@@ -14,5 +14,7 @@ internal sealed class GraphicsContainerModule : IContainerModule
         containerBuilder.For<IResourceFactory>().Use<ResourceFactory>().InstancePerDependency();
 
         containerBuilder.For<IGeometryCombiner>().Use<GeometryCombiner>().InstancePerDependency();
+
+        containerBuilder.For(typeof(IResourceManager<>), typeof(IResourceProvider<>)).Use(typeof(ResourceManager<>)).SingleInstance();
     }
 }
