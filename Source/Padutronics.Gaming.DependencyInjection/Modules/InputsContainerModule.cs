@@ -1,6 +1,7 @@
 using Padutronics.DependencyInjection;
 using Padutronics.Gaming.Frames;
 using Padutronics.Gaming.Inputs;
+using Padutronics.Gaming.Inputs.Keyboards;
 
 namespace Padutronics.Gaming.DependencyInjection.Modules;
 
@@ -13,5 +14,7 @@ internal sealed class InputsContainerModule : IContainerModule
         containerBuilder.For<IInputQueue, IInputQueueManager>().Use<InputQueue>().SingleInstance();
 
         containerBuilder.For<IFrameUpdatable>().Use<InputDeviceUpdatable>().SingleInstance();
+
+        containerBuilder.For<IInputDevice>().Use<InputDevice<KeyboardState>>().SingleInstance();
     }
 }
