@@ -14,6 +14,7 @@ internal sealed class ComponentsContainerModule : IContainerModule
 
         RegisterBehavior<IAnimationBehavior, AnimationComponentFactory, AnimationBehaviorToComponentAdapter>(containerBuilder);
         RegisterBehavior<IDrawBehavior, DrawComponentFactory, DrawBehaviorToComponentAdapter>(containerBuilder);
+        RegisterBehavior<IInputBehavior, InputComponentFactory, InputBehaviorToComponentAdapter>(containerBuilder);
     }
 
     private void RegisterBehavior<TBehavior, TFactory, TAdapter>(IContainerBuilder containerBuilder)
