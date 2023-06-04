@@ -21,6 +21,7 @@ public sealed class GamingContainerModule : IContainerModule
             .IncludeModule<GraphicsContainerModule>()
             .IncludeModule<InputsContainerModule>()
             .IncludeModule<ScenesContainerModule>()
-            .IncludeModule<TimingContainerModule>();
+            .IncludeModule<TimingContainerModule>()
+            .IncludeModule<UIContainerModule>();
     }
 }
