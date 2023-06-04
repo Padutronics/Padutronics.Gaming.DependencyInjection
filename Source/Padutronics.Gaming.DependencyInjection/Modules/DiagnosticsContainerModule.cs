@@ -8,5 +8,6 @@ internal sealed class DiagnosticsContainerModule : IContainerModule
     public void Load(IContainerBuilder containerBuilder)
     {
         containerBuilder.For<ConsoleOptions>().UseSelf().SingleInstance();
+        containerBuilder.For<IConsoleVisibilityManager, IConsoleVisibilityProvider>().Use<ConsoleVisibilityManager>().SingleInstance();
     }
 }
