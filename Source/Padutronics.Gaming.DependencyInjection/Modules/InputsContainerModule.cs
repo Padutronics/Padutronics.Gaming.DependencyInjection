@@ -22,5 +22,6 @@ internal sealed class InputsContainerModule : IContainerModule
 
         containerBuilder.For<IInputDevice>().Use<InputDevice<MouseState>>().SingleInstance();
         containerBuilder.For<IMouse, IMouseManager, IInputDeviceManager<MouseState>>().Use<Mouse>().SingleInstance();
+        containerBuilder.For<IMouseServices>().Use<MouseServices>().SingleInstance();
     }
 }
