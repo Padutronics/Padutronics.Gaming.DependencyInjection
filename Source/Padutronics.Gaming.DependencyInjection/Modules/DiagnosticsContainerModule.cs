@@ -13,5 +13,6 @@ internal sealed class DiagnosticsContainerModule : IContainerModule
         containerBuilder.For<IConsoleVisibilityManager, IConsoleVisibilityProvider>().Use<ConsoleVisibilityManager>().SingleInstance();
 
         containerBuilder.For<IInputBehavior>().Use<ConsoleInputBehavior>().SingleInstance();
+        containerBuilder.For<IUIBehavior>().Use<ConsoleUIBehavior>().SingleInstance();
     }
 }
