@@ -10,5 +10,6 @@ internal sealed class AnimationContainerModule : IContainerModule
         containerBuilder.For<IAnimationManager, IAnimationUpdater>().Use<AnimationManager>().SingleInstance();
 
         containerBuilder.For<IAnimationTemplateFactory>().UseFactory();
+        containerBuilder.For(typeof(IAnimationTemplate<>)).Use(typeof(AnimationTemplate<>)).InstancePerDependency();
     }
 }
