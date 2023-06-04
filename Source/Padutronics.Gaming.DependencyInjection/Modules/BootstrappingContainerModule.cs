@@ -7,6 +7,7 @@ internal sealed class BootstrappingContainerModule : IContainerModule
 {
     public void Load(IContainerBuilder containerBuilder)
     {
+        RegisterBootstrapper<EventListenerBootstrapper>(containerBuilder);
         RegisterBootstrapper<StartSceneBootstrapper>(containerBuilder);
     }
 
