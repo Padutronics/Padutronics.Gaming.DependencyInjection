@@ -2,6 +2,7 @@ using Padutronics.DependencyInjection;
 using Padutronics.Gaming.Components.Behaviors;
 using Padutronics.Gaming.Diagnostics.Console;
 using Padutronics.Gaming.Diagnostics.Console.Behaviors;
+using Padutronics.Gaming.Diagnostics.Data.Monitoring;
 
 namespace Padutronics.Gaming.DependencyInjection.Modules;
 
@@ -14,5 +15,7 @@ internal sealed class DiagnosticsContainerModule : IContainerModule
 
         containerBuilder.For<IInputBehavior>().Use<ConsoleInputBehavior>().SingleInstance();
         containerBuilder.For<IUIBehavior>().Use<ConsoleUIBehavior>().SingleInstance();
+
+        containerBuilder.For<IDataMonitorEntryFactory>().UseFactory();
     }
 }
