@@ -8,5 +8,6 @@ internal sealed class UIContainerModule : IContainerModule
     public void Load(IContainerBuilder containerBuilder)
     {
         containerBuilder.For<ILayoutServices>().Use<LayoutServices>().SingleInstance();
+        containerBuilder.For<IVisualTree>().Use<VisualTree>().SingleInstance();
     }
 }
