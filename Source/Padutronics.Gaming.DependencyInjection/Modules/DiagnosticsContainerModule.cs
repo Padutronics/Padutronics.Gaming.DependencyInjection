@@ -18,6 +18,7 @@ internal sealed class DiagnosticsContainerModule : IContainerModule
 
         containerBuilder.For<IDataMonitorEntryFactory>().UseFactory();
         containerBuilder.For(typeof(SequenceDataMonitorEntry<>)).UseSelf().InstancePerDependency();
+        containerBuilder.For(typeof(ValueDataMonitorEntry<>)).UseSelf().InstancePerDependency();
         containerBuilder.For<IDataMonitor>().Use<DataMonitor>().SingleInstance();
     }
 }
