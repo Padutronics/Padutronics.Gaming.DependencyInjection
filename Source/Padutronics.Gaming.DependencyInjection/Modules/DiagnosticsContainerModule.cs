@@ -17,5 +17,6 @@ internal sealed class DiagnosticsContainerModule : IContainerModule
         containerBuilder.For<IUIBehavior>().Use<ConsoleUIBehavior>().SingleInstance();
 
         containerBuilder.For<IDataMonitorEntryFactory>().UseFactory();
+        containerBuilder.For<IDataMonitor>().Use<DataMonitor>().SingleInstance();
     }
 }
