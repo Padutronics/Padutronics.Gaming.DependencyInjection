@@ -29,5 +29,6 @@ internal sealed class UIContainerModule : IContainerModule
 
         containerBuilder.For<IPanelFactory>().UseFactory();
         containerBuilder.For<Grid>().UseSelf().InstancePerDependency();
+        containerBuilder.For<StackPanel>().UseSelf().InstancePerDependency();
     }
 }
