@@ -14,5 +14,6 @@ internal sealed class UIContainerModule : IContainerModule
 
         containerBuilder.For<IControlFactory>().UseFactory();
         containerBuilder.For<Blank>().UseSelf().InstancePerDependency();
+        containerBuilder.For<Button>().UseSelf().InstancePerDependency();
     }
 }
