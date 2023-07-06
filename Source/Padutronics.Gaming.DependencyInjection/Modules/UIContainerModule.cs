@@ -28,5 +28,6 @@ internal sealed class UIContainerModule : IContainerModule
         containerBuilder.For(typeof(ILabelStyle<,>)).Use(typeof(LabelStyle<,>)).InstancePerDependency();
 
         containerBuilder.For<IPanelFactory>().UseFactory();
+        containerBuilder.For<Grid>().UseSelf().InstancePerDependency();
     }
 }
