@@ -16,5 +16,6 @@ internal sealed class UIContainerModule : IContainerModule
         containerBuilder.For<Blank>().UseSelf().InstancePerDependency();
         containerBuilder.For<Button>().UseSelf().InstancePerDependency();
         containerBuilder.For(typeof(Background<,>)).UseSelf().InstancePerDependency();
+        containerBuilder.For(typeof(Border<,>)).UseSelf().InstancePerDependency();
     }
 }
