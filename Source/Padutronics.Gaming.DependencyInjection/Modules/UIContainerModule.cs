@@ -1,6 +1,7 @@
 using Padutronics.DependencyInjection;
 using Padutronics.Gaming.UI;
 using Padutronics.Gaming.UI.Controls;
+using Padutronics.Gaming.UI.Panels;
 
 namespace Padutronics.Gaming.DependencyInjection.Modules;
 
@@ -25,5 +26,7 @@ internal sealed class UIContainerModule : IContainerModule
         containerBuilder.For(typeof(IBackgroundStyle<,>)).Use(typeof(BackgroundStyle<,>)).InstancePerDependency();
         containerBuilder.For(typeof(IBorderStyle<,>)).Use(typeof(BorderStyle<,>)).InstancePerDependency();
         containerBuilder.For(typeof(ILabelStyle<,>)).Use(typeof(LabelStyle<,>)).InstancePerDependency();
+
+        containerBuilder.For<IPanelFactory>().UseFactory();
     }
 }
