@@ -23,5 +23,6 @@ internal sealed class UIContainerModule : IContainerModule
         containerBuilder.For<IBlankStyle>().Use<BlankStyle>().InstancePerDependency();
         containerBuilder.For<IButtonStyle>().Use<ButtonStyle>().InstancePerDependency();
         containerBuilder.For(typeof(IBackgroundStyle<,>)).Use(typeof(BackgroundStyle<,>)).InstancePerDependency();
+        containerBuilder.For(typeof(IBorderStyle<,>)).Use(typeof(BorderStyle<,>)).InstancePerDependency();
     }
 }
